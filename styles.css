@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+header {
+  background-color: #404042;
+}
+
+h1 {
+  color: #dd1972;
+  font-weight: 700;
+}
+
+h1 span {
+  font-weight: 700;
+}
