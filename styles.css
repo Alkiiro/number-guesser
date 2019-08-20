@@ -62,3 +62,8 @@ header p {
   left: 100%;
   margin-left: 15px;
 }
+@media  (max-width: 812px) {
+  header {
+    width: 812px;
+  }
+}
