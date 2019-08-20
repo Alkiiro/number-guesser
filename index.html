@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Number Guesser Game</title>
+  </head>
+  <body>
+    <header>
+      <h1><span>Number</span>Guesser</h1>
+      <p class="subhead">Ultimate Challenger Edition</p>
+    </header>
+    <main>
+      <section class="sec-1">
+        <article class="set-range-art">
+          <form class="set-range-f" action="index.html" method="get">
+            <h5>Set Range</h5>
+            <label for="min-range">Min Range</label>
+            <input type="text" name="min-range" value="">
+            <label for="max-range">Max Range</label>
+            <input type="text" name="max-range" value="">
+            <button type="button" name="update">UPDATE</button>
+          </form>
+        </article>
+        <article class="user-input-art">
+          <p>The Current Range is <span>1</span> to <span>100</span></p>
+          <form class="user1-input-f" action="index.html" method="get">
+            <h4>Challenger 1</h4>
+            <label for="challenger1name">Name</label>
+            <input type="text" name="challenger1name" value="">
+            <label for="user1-guess">Guess</label>
+            <input type="text" name="user1-guess" value="">
+          </form>
+          <form class="user2-input-f" action="index.html" method="get">
+            <h4>Challenger 2</h4>
+            <label for="challenger2name">Name</label>
+            <input type="text" name="challenger2name" value="">
+            <label for="user2-guess">Guess</label>
+            <input type="text" name="user2-guess" value="">
+          </form>
+          <div class="game-controls">
+            <button type="button" name="submit-guess">Submit Guess</button>
+            <button type="button" name="reset-game">Reset Game</button>
+            <button type="button" name="clear-Game">Clear Game</button>
+          </div>
+        </article>
+        <article class="user-guess-output">
+          <p>Latest Score</p>
+          <div class="user1-output">
+            <h6>Challenger 1 Name</h6>
+            <p>Current Guess</p>
+            <output name="user1-result">97</output>
+            <output name="user1-guess-feedback">that's too high</output>
+          </div>
+<!-- ARTICLE DIVIDER: FIGURE IT OUT -->
+          <div class="user2-output">
+            <h6>Challenger 2</h6>
+            <p>Current Guess</p>
+            <output name="user2-result">3</output>
+            <output name="user2-guess-feedback">that's too low</output>
+          </div>
+        </article>
+      </section>
+      <section class="sec-2">
+        <article class="winner-card-number">
+          <output name="user1-name">Challenger 1 Name</output>
+          <p>vs</p>
+          <output name="user2-name">Challenger 2 Name</output>
+          <hr>
+          <output name="winner-name">Challenger 2 Name</output>
+          <p>WINNER</p>
+          <hr>
+          <output name="winner-guess-number">47 Guesses</output>
+          <output name="win-time">1.35 Minutes</output>
+          <button type="button" name="delete-result"></button>
+        </article>
+      </section>
+    </main>
+  </body>
+  <script src="main.js" charset="utf-8"></script>
+</html>
