@@ -9,13 +9,56 @@ body {
 
 header {
   background-color: #404042;
+  text-align: center;
 }
 
 h1 {
   color: #dd1972;
-  font-weight: 700;
+  font-weight: 300;
+  letter-spacing: -.001em;
+  font-size: 3.9em;
+  text-transform: uppercase;
+  padding: 0.2em 0 0 0;
 }
 
 h1 span {
   font-weight: 700;
+}
+header p {
+  color: #ffffff;
+  text-transform: uppercase;
+  word-spacing: .25em;
+  font-weight: 300;
+  padding: 0px 0 1.1em 0;
+}
+
+.subhead {
+  line-height: 0.5;
+  text-align: center;
+  padding-top: 0.4em;
+}
+
+.subhead span {
+  display: inline-block;
+  position: relative;
+}
+
+.subhead span:before,
+.subhead span:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  border-bottom: 1px solid white;
+  top: 0;
+  width: 100px;
+}
+
+.subhead span:before {
+  right: 100%;
+  margin-right: 15px;
+}
+
+.subhead span:after {
+  left: 100%;
+  margin-left: 15px;
 }
