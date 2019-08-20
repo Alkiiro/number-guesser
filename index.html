@@ -12,29 +12,29 @@
       <p class="subhead"><span>Ultimate Challenger Edition</span></p>
     </header>
     <main>
-      <section class="sec-1">
+      <section class="user-input-sec">
         <article class="set-range-art">
           <form class="set-range-f" action="index.html" method="get">
-            <h5>Set Range</h5>
-            <label for="min-range">Min Range</label>
-            <input type="text" name="min-range" value="">
-            <label for="max-range">Max Range</label>
-            <input type="text" name="max-range" value="">
-            <button type="button" name="update">UPDATE</button>
+            <h5 class="set-range-h">Set Range</h5>
+            <label class="min-range-l">Min Range</label>
+              <input class="min-range-in" type="text" name="min-range" value="">
+            <label class="max-range-l">Max Range</label>
+              <input class="max-range-in" type="text" name="max-range" value="">
+            <button class="update-range-but" type="button" name="update-ranges">Update</button>
           </form>
         </article>
         <article class="user-input-art">
-          <p>The Current Range is <span>1</span> to <span>100</span></p>
+          <p>The Current Range is <span class="users-min-range">1</span> to <span class="users-max-range">100</span></p>
           <form class="user1-input-f" action="index.html" method="get">
-            <h4>Challenger 1</h4>
-            <label for="challenger1name">Name</label>
-            <input type="text" name="challenger1name" value="">
-            <label for="user1-guess">Guess</label>
-            <input type="text" name="user1-guess" value="">
+            <h5 class="challenger1-h">Challenger 1</h5>
+            <label class="user1-name-l">Name</label>
+              <input class="user1-name-in" type="text" name="challenger1-name" value="">
+            <label class="user2-name-l">Guess</label>
+              <input class="user2-name-in" type="text" name="user1-guess" value="">
           </form>
           <form class="user2-input-f" action="index.html" method="get">
-            <h4>Challenger 2</h4>
-            <label for="challenger2name">Name</label>
+            <h5 class="challenger2-h">Challenger 2</h5>
+            <label>Name</label>
             <input type="text" name="challenger2name" value="">
             <label for="user2-guess">Guess</label>
             <input type="text" name="user2-guess" value="">
@@ -46,7 +46,7 @@
           </div>
         </article>
         <article class="user-guess-output">
-          <p>Latest Score</p>
+          <h5>Latest Score</h5>
           <div class="user1-output">
             <h6>Challenger 1 Name</h6>
             <p>Current Guess</p>
@@ -62,14 +62,14 @@
           </div>
         </article>
       </section>
-      <section class="sec-2">
+      <section class="game-results-sec">
         <article class="winner-card-number">
           <output name="user1-name">Challenger 1 Name</output>
           <p>vs</p>
           <output name="user2-name">Challenger 2 Name</output>
           <hr>
           <output name="winner-name">Challenger 2 Name</output>
-          <p>WINNER</p>
+          <p>Winner</p>
           <hr>
           <output name="winner-guess-number">47 Guesses</output>
           <output name="win-time">1.35 Minutes</output>
