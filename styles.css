@@ -65,9 +65,48 @@ header p {
 main {
   display: flex;
 }
-.sec-1 { //  now named .user-input-sec
-  width: 53%;
+.user-input-sec {
+    width: 53%;
+    background-color: #f7f7f7;
+}
+
+.set-range-art {
+  width: 100%;
+
+}
+.set-range-art h5 {
+  font-size: 1em;
+  font-weight: 700;
+  color: #404042;
+
+}
+form.set-range-f {
+  padding: 0 0 0 .5em;
+  margin: .5em 0 0 0;
   background-color: #ffffff;
+}
+.set-range-h {
+  display: block;
+  padding: 0.7em 0 0.1em 0;
+}
+.min-range-l, .max-range-l {
+  font-weight: 300;
+  font-size: 0.8em;
+}
+input {
+  border: 0.15em solid #D0D2d3;
+  border-radius: 1.8px;
+  width: 11.9em;
+  height: 2em;
+}
+button {
+  color: #ffffff;
+  background-color: #6e6e6e;
+  font-size: 0.7em;
+  border-radius: 1.1em;
+  padding: 0.2em 1.15em;
+  text-transform: uppercase;
+  margin: 0.9em;
 }
 @media  (max-width: 812px) {
   header {
