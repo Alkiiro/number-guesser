@@ -15,65 +15,65 @@
       <section class="user-input-sec">
         <article class="set-range-art">
           <form class="set-range-f" action="index.html" method="get">
-            <h5 class="set-range-h">Set Range</h5>
+            <h5 class="set-range-h5">Set Range</h5>
             <label class="min-range-l">Min Range</label>
               <input class="min-range-in" type="text" name="min-range" value="">
             <label class="max-range-l">Max Range</label>
               <input class="max-range-in" type="text" name="max-range" value="">
-            <button class="update-range-but" type="button" name="update-ranges">Update</button>
+            <button class="update-range-but" type="button" name="update-range">Update</button>
           </form>
         </article>
         <article class="user-input-art">
           <p>The Current Range is <span class="users-min-range">1</span> to <span class="users-max-range">100</span></p>
           <form class="user1-input-f" action="index.html" method="get">
-            <h5 class="challenger1-h">Challenger 1</h5>
+            <h5 class="user1-h5">Challenger 1</h5>
             <label class="user1-name-l">Name</label>
-              <input class="user1-name-in" type="text" name="challenger1-name" value="">
-            <label class="user2-name-l">Guess</label>
-              <input class="user2-name-in" type="text" name="user1-guess" value="">
+              <input class="user1-name-in" type="text" name="user1-name" value="">
+            <label class="user1-guess-l">Guess</label>
+              <input class="user1-guess-in" type="text" name="user1-guess" value="">
           </form>
           <form class="user2-input-f" action="index.html" method="get">
-            <h5 class="challenger2-h">Challenger 2</h5>
-            <label>Name</label>
-            <input type="text" name="challenger2name" value="">
-            <label for="user2-guess">Guess</label>
-            <input type="text" name="user2-guess" value="">
+            <h5 class="user2-h">Challenger 2</h5>
+            <label class="user2-name-l">Name</label>
+              <input class="user2-name-in" type="text" name="user2-name" value="">
+            <label class="user2-guess-l">Guess</label>
+              <input class="user2-guess-in" type="text" name="user2-guess" value="">
           </form>
           <div class="game-controls">
-            <button type="button" name="submit-guess">Submit Guess</button>
-            <button type="button" name="reset-game">Reset Game</button>
-            <button type="button" name="clear-Game">Clear Game</button>
+            <button class="submit-guess-but" type="button" name="submit-guess">Submit Guess</button>
+            <button class="reset-game-but" type="button" name="reset-game">Reset Game</button>
+            <button class="clear-game-but" type="button" name="clear-game">Clear Game</button>
           </div>
         </article>
-        <article class="user-guess-output">
-          <h5>Latest Score</h5>
+        <article class="user-guess-output-art">
+          <h5 class="latest-score-h5">Latest Score</h5>
           <div class="user1-output">
-            <h6>Challenger 1 Name</h6>
+            <p class="user1-name-p-guess-out">Challenger 1 Name</p>
             <p>Current Guess</p>
-            <output name="user1-result">97</output>
-            <output name="user1-guess-feedback">that's too high</output>
+            <p class="user1-guess-out-p">User1 Guess</p>
+            <p class="user1-guess-feedback-p">Corresponding Feedback</p>
           </div>
-<!-- ARTICLE DIVIDER: FIGURE IT OUT -->
+<!-- ARTICLE DIVIDER VERTICAL LINE: FIGURE IT OUT -->
           <div class="user2-output">
-            <h6>Challenger 2</h6>
+            <p class="user2-name-p-guess-out">Challenger 2 Name</p>
             <p>Current Guess</p>
-            <output name="user2-result">3</output>
-            <output name="user2-guess-feedback">that's too low</output>
+            <p class="user2-guess-out-p">User2 Guess</p>
+            <p class="user2-guess-feedback-p">Corresponding Feedback</p>
           </div>
         </article>
       </section>
       <section class="game-results-sec">
-        <article class="winner-card-number">
-          <output name="user1-name">Challenger 1 Name</output>
+        <article class="winnercard-art">
+          <p class="user1-name-p-winnercard">Challenger 1 Name</p>
           <p>vs</p>
-          <output name="user2-name">Challenger 2 Name</output>
+          <p class="user2-name-p-winnercard">Challenger 2 Name</p>
           <hr>
-          <output name="winner-name">Challenger 2 Name</output>
-          <p>Winner</p>
+          <h3 class="winner-name-h3">Winner Name</h3>
+          <h3>Winner</h3>
           <hr>
-          <output name="winner-guess-number">47 Guesses</output>
-          <output name="win-time">1.35 Minutes</output>
-          <button type="button" name="delete-result"></button>
+          <p class="winner-total-guesses-p"><span>47</span> Guesses</p>
+          <p class="win-time-p"><span>0.00</span> Minutes</p>
+          <button class="delete-winner-card-but" type="button" name="delete-winner-card">X</button>
         </article>
       </section>
     </main>
