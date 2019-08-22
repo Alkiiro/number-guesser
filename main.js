@@ -4,15 +4,20 @@ var deleteWinnerCardBut = document.querySelector('.delete-winner-card-but');
 var resetGameBut = document.querySelector('.reset-game-but');
 var updateRangeBut = document.querySelector('.update-range-but');
 var submitGuessBut = document.querySelector('.submit-guess-but');
+var randomInt;
+var user1NameIn = document.querySelector('.user1-name-in');
+var user2NameIn = document.querySelector('.user2-name-in');
+var user1NamePGuessOut = document.querySelector('.user1-name-p-guess-out');
+var user2NamePGuessOut = document.querySelector('.user2-name-p-guess-out');
 
 
 // random Number
 function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+  randomInt =  Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+
 }
-// getRandomInt(1, 100);
 // inputs
 var minRangeIn = document.querySelector('.min-range-in');
 var maxRangeIn = document.querySelector('.max-range-in');
@@ -33,17 +38,17 @@ resetGameBut.addEventListener('click', function() {
   console.log("reset game button")
 });
 updateRangeBut.addEventListener('click', function() {
-    // var minRangeIn = document.querySelector('.min-range-in');
-    // // var maxRangeIn = document.querySelector('.max-range-in');
-    //
-    // minRangeInValue = minRangeIn.value;
-    // // maxRangeInValue = maxRangeIn.value;
-    console.log(minRangeIn.value, maxRangeIn.value);
-
+    getRandomInt(minRangeIn.value, maxRangeIn.value);
+    console.log(randomInt);
 
 });
+
 submitGuessBut.addEventListener('click', function() {
     console.log("submit guess button");
+     user1NamePGuessOut.innerText = user1NameIn.value;
+     user2NamePGuessOut.innerText = user2NameIn.value;
+
+
 });
 
 
