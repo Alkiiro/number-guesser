@@ -12,10 +12,10 @@ function getRandomInt(min, max) {
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
 }
-getRandomInt(1, 100);
+// getRandomInt(1, 100);
 // inputs
-// var minRangeIn = document.querySelector('.min-range-in').value;
-// var maxRangeInIn = document.querySelector('.max-range-in').value
+var minRangeIn = document.querySelector('.min-range-in');
+var maxRangeIn = document.querySelector('.max-range-in');
 
 // var user1NameIn = document.querySelector('.user1-name-in').value;
 // var user1Guess = document.querySelector('.user1-guess').value;
@@ -38,7 +38,7 @@ updateRangeBut.addEventListener('click', function() {
     //
     // minRangeInValue = minRangeIn.value;
     // // maxRangeInValue = maxRangeIn.value;
-    // console.log(minRangeInValue, maxRangeInValue);
+    console.log(minRangeIn.value, maxRangeIn.value);
 
 
 });
