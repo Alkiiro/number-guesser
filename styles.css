@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +5,6 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
-  height: 100vh;
 }
 
 header {
@@ -67,23 +65,16 @@ header p {
 main {
   display: flex;
 }
+
+/* USER INPUT SECTION */
+
 .user-input-sec {
-  width: 50%;
-  background-color: #f7f7f7;
-  border-right: 1px solid #6e6e6e;
-  height: 100vh;
-  padding: 1.1em;
+    width: 53%;
+    background-color: #f7f7f7;
 }
-.user-input-art {
-  background-color: #ffffff;
-  border: 0.1em solid #D0D2d3;
-  margin-bottom: 0.8em;
-}
-article .set-range-art {
+
+.set-range-art {
   width: 100%;
-  border-right: 1px solid #6e6e6e;
-}
-.min-range-l {
 
 }
 .set-range-art h5 {
@@ -92,34 +83,19 @@ article .set-range-art {
   color: #404042;
 
 }
-.set-range-art input {
-
-}
 form.set-range-f {
   border: 0.1em solid #D0D2d3;
+  padding: 0 0 0 .5em;
+  margin: 0.3em 1.9px 1.9px 1.9px;
   background-color: #ffffff;
-  margin-bottom: 0.8em;
 }
 .set-range-h {
   display: block;
   padding: 0.7em 0 0.1em 0;
 }
-.min-range-l, .max-range-l, .user1-name-l,  .user1-guess-l, .user2-name-l, .user2-guess-l, p{
+.min-range-l, .max-range-l {
   font-weight: 300;
   font-size: 0.8em;
-}
-.user-guess-output-art {
-  background-color: #ffffff;
-  border: 0.1em solid #D0D2d3;
-  display: flex;
-  height: 12em;
-}
-.user1-output {
-  display: inline-block;
-}
-.user2-output {
-  border-left: 0.1em solid #D0D2d3;
-
 }
 input {
   border: 0.15em solid #D0D2d3;
@@ -142,6 +118,83 @@ button:hover {
 button .reset-game {
   background-color: #ffffff;
 }
+
+/* GAME RESULTS SECTION */
+
+.game-results-sec {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #D1D2D4;
+  width: 50%;
+  height
+}
+
+.winnercard-art {
+  display: flex;
+  flex-direction: column;
+  margin: 1em 0 0 0;
+  border: 2px #6e6e6e solid;
+  background-color: #FFFFFF;
+  width: 90%;
+  text-transform: uppercase;
+  font-weight:
+}
+
+.user1-vs-user2-p-winnercard {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: .8em 0 .8em 0;
+  color: #6e6e6e;
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.vs {
+  display: flex;
+  font-size: .8em;
+  font-weight: 300;
+  margin: 0 2.5em;
+}
+
+hr {
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+  border: 1px solid;
+  color: #D0D2d3;
+}
+
+.winner-name-h3 {
+  display: flex;
+  justify-content: center;
+  margin: .6em 0 0 0;
+  font-size: 2.5em;
+  color: #6e6e6e;
+  text-transform: uppercase;
+}
+
+.winner-title {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 .6em 0;
+  color: #6e6e6e;
+  font-weight: 300;
+  font-size: 2.5em;
+}
+
+.gamefacts-deletebut-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.delete-winnercard-but {
+  margin: 0;
+}
+
 
 @media  (max-width: 812px) {
   header {
