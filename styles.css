@@ -142,6 +142,7 @@ button:hover {
 button .reset-game {
   background-color: #ffffff;
 }
+
 @media  (max-width: 812px) {
   header {
     width: 812px;
