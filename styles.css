@@ -92,6 +92,9 @@ article .set-range-art {
   color: #404042;
 
 }
+.set-range-art input {
+
+}
 form.set-range-f {
   border: 0.1em solid #D0D2d3;
   background-color: #ffffff;
