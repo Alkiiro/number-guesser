@@ -51,6 +51,7 @@ resetGameBut.addEventListener('click', function() {
 updateRangeBut.addEventListener('click', function() {
     getRandomInt(minRangeIn.value, maxRangeIn.value);
     console.log(randomInt);
+    isUserInputANumber(parseInt(user1GuessIn.value), parseInt(user2GuessIn.value));
 
 });
 
@@ -61,11 +62,16 @@ submitGuessBut.addEventListener('click', function() {
      user2NamePWinnercard.innerText = user2NameIn.value;
      user1GuessOutP.innerText = user1GuessIn.value;
      user2GuessOutP.innerText = user2GuessIn.value;
-
      userGuessTester(parseInt(user1GuessIn.value), parseInt(user2GuessIn.value));
-     user1GuessFeedback();
-});
 
+     user1GuessFeedback(parseInt(user1GuessIn.value));
+     user2GuessFeedback(parseInt(user2GuessIn.value));
+
+});
+function isUserInputANumber(num1, num2) {
+
+
+};
 function userGuessTester(num1, num2) {
   if (num1 === randomInt) {
     console.log("Yea you guessed right!");
@@ -74,8 +80,27 @@ function userGuessTester(num1, num2) {
   }
 };
 
-function user1GuessFeedback() {
-
+function user1GuessFeedback(num1) {
+  if (num1 > randomInt) {
+    user1GuessFeedbackP.innerText = 'You guessed too high';
+  } else if (num1 < randomInt) {
+    user1GuessFeedbackP.innerText = 'You guessed too low';
+  } else if (num1 === randomInt) {
+    user1GuessFeedbackP.innerText = 'Winner' ;
+  } else {
+    console.log("What guess feedback")
+  }
+};
+function user2GuessFeedback(num2) {
+  if (num2 > randomInt) {
+    user2GuessFeedbackP.innerText = 'You guessed too high';
+  } else if (num2 < randomInt) {
+    user2GuessFeedbackP.innerText = 'You guessed too low';
+  } else if (num2 === randomInt) {
+    user2GuessFeedbackP.innerText = 'Winner' ;
+  } else {
+    console.log("What guess feedback")
+  }
 };
 
 // var inputBox = document.querySelector('input');
