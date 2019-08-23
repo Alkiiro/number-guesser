@@ -47,6 +47,11 @@ deleteWinnerCardBut.addEventListener('click', function() {
 });
 resetGameBut.addEventListener('click', function() {
   console.log("reset game button")
+  user1GuessIn.value = '';
+  user2GuessIn.value = '';
+  user1GuessOutP.innerText = "";
+  user2GuessOutP.innerText = "";
+
 });
 updateRangeBut.addEventListener('click', function() {
     getRandomInt(minRangeIn.value, maxRangeIn.value);
@@ -58,10 +63,10 @@ updateRangeBut.addEventListener('click', function() {
 submitGuessBut.addEventListener('click', function() {
      user1NamePGuessOut.innerText = user1NameIn.value;
      user2NamePGuessOut.innerText = user2NameIn.value;
-     user1NamePWinnercard.innerText = user1NameIn.value;
-     user2NamePWinnercard.innerText = user2NameIn.value;
      user1GuessOutP.innerText = user1GuessIn.value;
      user2GuessOutP.innerText = user2GuessIn.value;
+     user1NamePWinnercard.innerText = user1NameIn.value;
+     user2NamePWinnercard.innerText = user2NameIn.value;
      userGuessTester(parseInt(user1GuessIn.value), parseInt(user2GuessIn.value));
 
      user1GuessFeedback(parseInt(user1GuessIn.value));
