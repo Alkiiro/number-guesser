@@ -136,8 +136,8 @@ submitGuessBut.addEventListener('click', function() {
      user1GuessFeedback(parseInt(user1GuessIn.value));
      user2GuessFeedback(parseInt(user2GuessIn.value));
 
-     validateName1(user1NameIn); // check names
-     validateName2(user2NameIn); // check names
+     // validateName1(user1NameIn); // check names
+     // validateName2(user2NameIn); // check names
 
 });
 
