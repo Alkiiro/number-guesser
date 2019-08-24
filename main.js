@@ -1,6 +1,6 @@
 // buttons
 var clearGameBut = document.querySelector('.clear-game-but');
-var deleteWinnerCardBut = document.querySelector('.delete-winner-card-but');
+var deleteWinnerCardBut = document.querySelector('.delete-winnercard-but');
 var resetGameBut = document.querySelector('.reset-game-but');
 var updateRangeBut = document.querySelector('.update-range-but');
 var submitGuessBut = document.querySelector('.submit-guess-but');
