@@ -189,28 +189,39 @@ hr {
 .gamefacts-deletebut-div {
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-around;
   height: 6vh;
 }
 
 .delete-winnercard-but {
-  display: flex;
-  align-items: center;
+  text-align: center;
   border-radius: 50%;
+  padding: 0;
+  height: 25px;
+  width: 25px;
+  font-size: 1em;
 }
 
 .winner-total-guesses-p, .win-time-p {
   display: flex;
   align-items: center;
   color: grey;
+  font-size: 1.2em;
+  font-weight: 300;
 }
 
 .winner-total-guesses-p span, .win-time-p span {
   font-weight: bold;
   color: #6e6e6e;
+  margin: .3em;
 }
 
+.winner-total-guesses-p, .winner-total-guesses-p span {
+}
 
+.win-time-p, .win-time span {
+}
 
 @media  (max-width: 812px) {
   header {
