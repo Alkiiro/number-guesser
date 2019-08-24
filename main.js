@@ -18,6 +18,10 @@ var user2GuessOutP = document.querySelector('.user2-guess-out-p');
 var user1GuessFeedbackP = document.querySelector('.user1-guess-feedback-p');
 var user2GuessFeedbackP = document.querySelector('.user2-guess-feedback-p');
 
+// update current Range
+var usersMinRange = document.querySelector('users-min-range');
+var usersMaxRange = document.querySelector('users-max-range');
+
 //
 var inputBackgrounds = document.querySelectorAll('input');
 // user guesses in
@@ -29,7 +33,8 @@ function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   randomInt =  Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
-
+  // usersMinRange.innerText = minRangeIn;
+  // usersMaxRange.innerText = maxRangeIn;
 }
 // inputs
 var minRangeIn = document.querySelector('.min-range-in');
