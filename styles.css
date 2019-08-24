@@ -121,6 +121,12 @@ button.reset-game {
   background-color: #ffffff;
 }
 
+
+.pink {
+  background-color: pink;
+}
+
+
 /* GAME RESULTS SECTION */
 
 .game-results-sec {
