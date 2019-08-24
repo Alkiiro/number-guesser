@@ -69,7 +69,7 @@ main {
 /* USER INPUT SECTION */
 
 .user-input-sec {
-    width: 53%;
+    width: 50%;
     background-color: #f7f7f7;
 }
 
@@ -108,6 +108,8 @@ button {
   background-color: #6e6e6e;
   font-size: 0.7em;
   border-radius: 1.1em;
+  border: 0;
+  /* outline: 0; */
   padding: 0.2em 1.15em;
   text-transform: uppercase;
   margin: 0.9em;
@@ -115,7 +117,7 @@ button {
 button:hover {
   background-color: #dd1972;
 }
-button .reset-game {
+button.reset-game {
   background-color: #ffffff;
 }
 
@@ -138,7 +140,6 @@ button .reset-game {
   background-color: #FFFFFF;
   width: 90%;
   text-transform: uppercase;
-  font-weight:
 }
 
 .user1-vs-user2-p-winnercard {
@@ -148,7 +149,7 @@ button .reset-game {
   align-items: center;
   margin: .8em 0 .8em 0;
   color: #6e6e6e;
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: 700;
 }
 
@@ -180,7 +181,7 @@ hr {
   display: flex;
   justify-content: center;
   margin: 0 0 .6em 0;
-  color: #6e6e6e;
+  color: grey;
   font-weight: 300;
   font-size: 2.5em;
 }
@@ -189,11 +190,26 @@ hr {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  height: 6vh;
 }
 
 .delete-winnercard-but {
-  margin: 0;
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
 }
+
+.winner-total-guesses-p, .win-time-p {
+  display: flex;
+  align-items: center;
+  color: grey;
+}
+
+.winner-total-guesses-p span, .win-time-p span {
+  font-weight: bold;
+  color: #6e6e6e;
+}
+
 
 
 @media  (max-width: 812px) {
