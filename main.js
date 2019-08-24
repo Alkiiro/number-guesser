@@ -35,26 +35,38 @@ function getRandomInt(min, max) {
 var minRangeIn = document.querySelector('.min-range-in');
 var maxRangeIn = document.querySelector('.max-range-in');
 
-function validateName1(name1) {
-  var regex = /^[0-9a-zA-Z]+$/;
-  var user1AddClassError = document.querySelector('.user1-name-in');
-  if (regex.test(name1.value) !== true){
-    console.log("name1 error")
-    user1AddClassError.classList.add('pink');
-  } else {
-    console.log("name1 OK")
-  }
-}
-function validateName2(name2) {
-  var regex = /^[0-9a-zA-Z]+$/;
-  var user2AddClassError = document.querySelector('.user2-name-in');
-  if (regex.test(name2.value) !== true){
-    console.log("name2 error")
-    user2AddClassError.classList.add('pink');
+          // function validateName1(name1) {
+          //   var regex = /^[0-9a-zA-Z]+$/;
+          //   var user1AddClassError = document.querySelector('.user1-name-in');
+          //   if (regex.test(name1.value) !== true){
+          //     console.log("name1 error")
+          //     user1AddClassError.classList.add('pink');
+          //   } else {
+          //     console.log("name1 OK")
+          //   }
+          // }
+          // function validateName2(name2) {
+          //   var regex = /^[0-9a-zA-Z]+$/;
+          //   var user2AddClassError = document.querySelector('.user2-name-in');
+          //   if (regex.test(name2.value) !== true){
+          //     console.log("name2 error")
+          //     user2AddClassError.classList.add('pink');
+          //   } else {
+          //     console.log("name2 OK")
+          //   }
+          // }
 
-  } else {
-    console.log("name2 OK")
-  }
+function validateNumber(num, error) {
+var numGuess = parseInt(num.value);
+var regex = /^[0-9]+$/;
+if (regex.test(numGuess) !== true){
+  addError(num);
+  error.removeAttribute('hidden', false);
+}
+if (num.value === ""){
+  error.setAttribute('hidden', true);
+  removeError(num);
+}
 }
 
 ////// begin code from mod3

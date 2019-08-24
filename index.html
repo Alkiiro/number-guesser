@@ -17,9 +17,9 @@
           <form class="set-range-f" action="index.html" method="get">
             <h5 class="set-range-h5">Set Range</h5>
             <label class="min-range-l">Min Range</label>
-              <input class="min-range-in" type="text" name="min-range" value="">
+              <input class="min-range-in" type="text" name="min-range" value="" onkeydown="return /[0-9]/i.test(event.key)">
             <label class="max-range-l">Max Range</label>
-              <input class="max-range-in" type="text" name="max-range" value="">
+              <input class="max-range-in" type="text" name="max-range" value="" onkeydown="return /[0-9]/i.test(event.key)">
             <button class="update-range-but" type="button" name="update-range">Update</button>
           </form>
         </article>
@@ -28,9 +28,9 @@
           <form class="user1-input-f" action="index.html" method="get">
             <h5 class="user1-h5">Challenger 1</h5>
             <label class="user1-name-l">Name</label>
-              <input class="user1-name-in" type="text" name="user1-name" value="">
+              <input class="user1-name-in" type="text" name="user1-name" value="" onkeydown="return /[0-9a-zA-Z]/i.test(event.key)">
             <label class="user1-guess-l">Guess</label>
-              <input class="user1-guess-in" type="text" name="user1-guess" value="">
+              <input class="user1-guess-in" type="text" name="user1-guess" value="" onkeydown="return /[0-9a-zA-Z]/i.test(event.key)>
           </form>
           <form class="user2-input-f" action="index.html" method="get">
             <h5 class="user2-h">Challenger 2</h5>
