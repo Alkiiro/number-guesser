@@ -19,8 +19,8 @@ var user1GuessFeedbackP = document.querySelector('.user1-guess-feedback-p');
 var user2GuessFeedbackP = document.querySelector('.user2-guess-feedback-p');
 
 // update current Range
-var usersMinRange = document.querySelector('users-min-range');
-var usersMaxRange = document.querySelector('users-max-range');
+var usersMinRange = document.querySelector('.users-min-range');
+var usersMaxRange = document.querySelector('.users-max-range');
 
 //
 var inputBackgrounds = document.querySelectorAll('input');
@@ -33,8 +33,8 @@ function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   randomInt =  Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
-  // usersMinRange.innerText = minRangeIn;
-  // usersMaxRange.innerText = maxRangeIn;
+  // usersMinRange.innerText = minRangeIn.value;
+  // usersMaxRange.innerText = maxRangeIn.value;
 }
 // inputs
 var minRangeIn = document.querySelector('.min-range-in');
@@ -120,6 +120,9 @@ resetGameBut.addEventListener('click', function() {
 updateRangeBut.addEventListener('click', function() {
     getRandomInt(minRangeIn.value, maxRangeIn.value);
     console.log(randomInt);
+    usersMinRange.innerText = minRangeIn.value;
+    usersMaxRange.innerText = maxRangeIn.value;
+    console.log(minRangeIn.value, maxRangeIn.value);
     // isUserInputANumber(parseInt(user1GuessIn.value), parseInt(user2GuessIn.value));
 
 });
