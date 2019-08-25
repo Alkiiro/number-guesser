@@ -36,7 +36,7 @@ function getRandomInt(min, max) {
   // usersMinRange.innerText = minRangeIn.value;
   // usersMaxRange.innerText = maxRangeIn.value;
 }
-// inputs
+// Possible Random Number Range Inputs
 var minRangeIn = document.querySelector('.min-range-in');
 var maxRangeIn = document.querySelector('.max-range-in');
 
@@ -141,8 +141,20 @@ submitGuessBut.addEventListener('click', function() {
 
      // validateName1(user1NameIn); // check names
      // validateName2(user2NameIn); // check names
-
 });
+
+function enableClearButton() {
+  var disableClearButton = document.querySelector(".clear-game").disabled;
+  // var disableClearButtonHover = document.querySelector(".clear-game"). 
+  if (usersMinRange.value !== "") {
+    disableClearButton = false;
+    document.querySelector(".clear-game").style.backgroundColor = #D0D2D3;
+
+  } else {
+    disableClearButton = true;
+  }
+
+}
 
 function userGuessTester(num1, num2) {
   if (num1 === randomInt) {
