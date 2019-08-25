@@ -67,14 +67,20 @@ main {
 }
 
 /* USER INPUT SECTION */
-
+.min-range-div {
+  display: inline-block;
+}
+.max-range-div {
+  display: inline-block;
+}
 .user-input-sec {
     width: 50%;
     background-color: #f7f7f7;
 }
 
 .set-range-art {
-  width: 100%;
+  width: 95%;
+  margin: auto;
 
 }
 .set-range-art h5 {
@@ -83,11 +89,13 @@ main {
   color: #404042;
 
 }
+
 form.set-range-f {
   border: 0.1em solid #D0D2d3;
-  padding: 0 0 0 .5em;
-  margin: 0.3em 1.9px 1.9px 1.9px;
+  /* margin: 0.3em 1.9px 1.9px 1.9px; */
   background-color: #ffffff;
+  padding: 1em 0 0.5em 0.9em;
+
 }
 .set-range-h {
   display: block;
@@ -96,6 +104,7 @@ form.set-range-f {
 .min-range-l, .max-range-l {
   font-weight: 300;
   font-size: 0.8em;
+  display: block;
 }
 input {
   border: 0.15em solid #D0D2d3;
@@ -120,7 +129,10 @@ button:hover {
 button.reset-game {
   background-color: #ffffff;
 }
-
+.users-min-range, .users-max-range {
+  text-decoration: underline;
+  font-weight: 700;
+}
 
 .pink {
   background-color: pink;

@@ -16,10 +16,14 @@
         <article class="set-range-art">
           <form class="set-range-f" action="index.html" method="get">
             <h5 class="set-range-h5">Set Range</h5>
+            <div class="min-range-div">
             <label class="min-range-l">Min Range</label>
               <input class="min-range-in" type="text" name="min-range" value="" onkeydown="return /[0-9]/i.test(event.key)">
+              </div>
+              <div class="max-range-div">
             <label class="max-range-l">Max Range</label>
               <input class="max-range-in" type="text" name="max-range" value="" onkeydown="return /[0-9]/i.test(event.key)">
+              </div>
             <button class="update-range-but" type="button" name="update-range">Update</button>
           </form>
         </article>
