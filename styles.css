@@ -81,6 +81,7 @@ main {
 .set-range-art {
   width: 95%;
   margin: auto;
+  padding: 0 0 1em;
 
 }
 .set-range-art h5 {
@@ -133,7 +134,33 @@ button.reset-game {
   text-decoration: underline;
   font-weight: 700;
 }
-
+.user-input-art {
+  border: 0.1em solid #D0D2d3;
+  width: 94.4%;
+  margin: auto;
+  padding: 0;
+}
+.user-input-art p {
+  padding: .5em;
+}
+.user1-h5, .user2-h {
+  font-size: 1em;
+  padding: 1em 0 .5em .5em;
+}
+.user1-name-l, .user2-name-l {
+  padding: 0 0.5em;
+  display: block;
+}
+.user1-name-in, .user2-name-in {
+  margin: 0 0 0 0.5em;
+  display: inline-block;
+}
+.user1-guess-l, .user2-guess-l {
+  display: block;
+}
+.user1-guess-in, .user2-guess-in {
+  
+}
 .pink {
   background-color: pink;
 }
