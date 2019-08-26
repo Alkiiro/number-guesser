@@ -174,13 +174,16 @@ button.reset-game {
 }
 .user1-input-f {
 }
-.user1-score-out_num1, .User2-score-out_num2 {
+.user1-score-out-num1, .user2-score-out-num1 {
   font-size: 5.9em;
   color: #f74d9b;
   font-weight: 700;
   font-family: "Open Sans", sans-serif;
 }
 .user-guess-output-art {
+}
+.hidden {
+  display: none;
 
 }
 .user1-output {

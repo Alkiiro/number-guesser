@@ -18,6 +18,13 @@ var user2GuessOutP = document.querySelector('.user2-guess-out-p');
 var user1GuessFeedbackP = document.querySelector('.user1-guess-feedback-p');
 var user2GuessFeedbackP = document.querySelector('.user2-guess-feedback-p');
 
+var user1ScoreOutNum1 = document.querySelector('.user1-score-out-num1');
+var user2ScoreOutNum1 = document.querySelector('.user2-score-out-num1');
+
+// Possible Random Number Range Inputs
+var minRangeIn = document.querySelector('.min-range-in');
+var maxRangeIn = document.querySelector('.max-range-in');
+
 // update current Range
 var usersMinRange = document.querySelector('.users-min-range');
 var usersMaxRange = document.querySelector('.users-max-range');
@@ -36,30 +43,9 @@ function getRandomInt(min, max) {
   // usersMinRange.innerText = minRangeIn.value;
   // usersMaxRange.innerText = maxRangeIn.value;
 }
-// Possible Random Number Range Inputs
-var minRangeIn = document.querySelector('.min-range-in');
-var maxRangeIn = document.querySelector('.max-range-in');
-
-          // function validateName1(name1) {
-          //   var regex = /^[0-9a-zA-Z]+$/;
-          //   var user1AddClassError = document.querySelector('.user1-name-in');
-          //   if (regex.test(name1.value) !== true){
-          //     console.log("name1 error")
-          //     user1AddClassError.classList.add('pink');
-          //   } else {
-          //     console.log("name1 OK")
-          //   }
-          // }
-          // function validateName2(name2) {
-          //   var regex = /^[0-9a-zA-Z]+$/;
-          //   var user2AddClassError = document.querySelector('.user2-name-in');
-          //   if (regex.test(name2.value) !== true){
-          //     console.log("name2 error")
-          //     user2AddClassError.classList.add('pink');
-          //   } else {
-          //     console.log("name2 OK")
-          //   }
-          // }
+// // Possible Random Number Range Inputs
+// var minRangeIn = document.querySelector('.min-range-in');
+// var maxRangeIn = document.querySelector('.max-range-in');
 
 function validateNumber(num, error) {
 var numGuess = parseInt(num.value);
@@ -74,32 +60,6 @@ if (num.value === ""){
 }
 }
 
-////// begin code from mod3
-
-        // function validateNames(challName) {
-        //   var regex = /^[0-9a-zA-Z]+$/;
-        //   if (regex.test(challName.value) !== true){
-        //     addError(challName);
-        //   } else {
-        //     removeError(challName);
-        //   }
-        // }
-        //
-        // function validateNumber(num, error) {
-        //   var numGuess = parseInt(num.value);
-        //   var regex = /^[0-9]+$/;
-        //   if (regex.test(numGuess) !== true){
-        //     addError(num);
-        //     error.removeAttribute('hidden', false);
-        //   }
-        //   if (num.value === ""){
-        //     error.setAttribute('hidden', true);
-        //     removeError(num);
-        //   }
-        // }
-
-//// end code from mod3
-
 clearGameBut.addEventListener('click', function() {
 });
 
@@ -113,7 +73,6 @@ resetGameBut.addEventListener('click', function() {
   user2GuessIn.value = '';
   user1GuessOutP.innerText = "";
   user2GuessOutP.innerText = "";
-
 });
 
 updateRangeBut.addEventListener('click', function() {
@@ -127,16 +86,18 @@ updateRangeBut.addEventListener('click', function() {
 });
 
 submitGuessBut.addEventListener('click', function() {
+    
      user1NamePGuessOut.innerText = user1NameIn.value;
      user2NamePGuessOut.innerText = user2NameIn.value;
-     user1GuessOutP.innerText = user1GuessIn.value;
-     user2GuessOutP.innerText = user2GuessIn.value;
+     user1ScoreOutNum1.innerText = user1GuessIn.value;
+     user2ScoreOutNum1.innerText = user2GuessIn.value;
      user1NamePWinnercard.innerText = user1NameIn.value;
      user2NamePWinnercard.innerText = user2NameIn.value;
      userGuessTester(parseInt(user1GuessIn.value), parseInt(user2GuessIn.value));
 
      user1GuessFeedback(parseInt(user1GuessIn.value));
      user2GuessFeedback(parseInt(user2GuessIn.value));
+
 
      // validateName1(user1NameIn); // check names
      // validateName2(user2NameIn); // check names
