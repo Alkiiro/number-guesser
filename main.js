@@ -46,9 +46,15 @@ deleteWinnerCardBut.addEventListener('click', function() {
 
 resetGameBut.addEventListener('click', resetGame());
 
+function clearGame() {
+  emptyNameGuessInputs();
+  toggleResetClearButton();
+}
+
 function resetGame() {
   emptyNameGuessInputs();
-  toggleResetButton();
+  toggleResetClearButton();
+  getRandomInt();
   }
 
 function emptyNameGuessInputs() {
@@ -58,23 +64,33 @@ function emptyNameGuessInputs() {
   user2GuessIn.value = "";
 }
 
-function toggleResetButton() {
+function toggleResetClearButton() {
   if (user1NameIn.value !== "" ||
       user2NameIn.value !== "" ||
       user1GuessIn.value !== "" ||
       user2GuessIn.value !== "") {
+    clearGameBut.disabled = false;
+    clearGameBut.style.backgroundColor = "#6E6E6E";
     resetGameBut.disabled = false;
     resetGameBut.style.backgroundColor = "#6E6E6E";
   } else {
+    clearGameBut.disabled = true;
+    clearGameBut.style.backgroundColor = "#D0D2D3";
     resetGameBut.disabled = true;
     resetGameBut.style.backgroundColor = "#D0D2D3";
   }
 }
 
-user1NameIn.addEventListener('keyup', toggleResetButton);
-user2NameIn.addEventListener('keyup', toggleResetButton);
-user1GuessIn.addEventListener('keyup', toggleResetButton);
-user2GuessIn.addEventListener('keyup', toggleResetButton);
+user1NameIn.addEventListener('keyup', toggleResetClearButton);
+user2NameIn.addEventListener('keyup', toggleResetClearButton);
+user1GuessIn.addEventListener('keyup', toggleResetClearButton);
+user2GuessIn.addEventListener('keyup', toggleResetClearButton);
+clearGameBut.addEventListener('click', clearGame);
+
+user1NameIn.addEventListener('keyup', toggleResetClearButton);
+user2NameIn.addEventListener('keyup', toggleResetClearButton);
+user1GuessIn.addEventListener('keyup', toggleResetClearButton);
+user2GuessIn.addEventListener('keyup', toggleResetClearButton);
 resetGameBut.addEventListener('click', resetGame);
 
 updateRangeBut.addEventListener('click', function() {
@@ -103,32 +119,19 @@ submitGuessBut.addEventListener('click', function() {
      // validateName2(user2NameIn); // check names
 });
 
-function toggleClearButton() {
-  if (user1NameIn.value !== "" ||
-      user2NameIn.value !== "" ||
-      user1GuessIn.value !== "" ||
-      user2GuessIn.value !== "") {
-    clearGameBut.disabled = false;
-    clearGameBut.style.backgroundColor = "#6E6E6E";
-  } else {
-    clearGameBut.disabled = true;
-    clearGameBut.style.backgroundColor = "#D0D2D3";
-  }
-}
+// function clearValues() {
+//   user1NameIn.value = "";
+//   user2NameIn.value = "";
+//   user1GuessIn.value = "";
+//   user2GuessIn.value = "";
+//   toggleClearButton();
+// }
 
-function clearValues() {
-  user1NameIn.value = "";
-  user2NameIn.value = "";
-  user1GuessIn.value = "";
-  user2GuessIn.value = "";
-  toggleClearButton();
-}
-
-user1NameIn.addEventListener('keyup', toggleClearButton);
-user2NameIn.addEventListener('keyup', toggleClearButton);
-user1GuessIn.addEventListener('keyup', toggleClearButton);
-user2GuessIn.addEventListener('keyup', toggleClearButton);
-clearGameBut.addEventListener('click', clearValues)
+user1NameIn.addEventListener('keyup', toggleResetClearButton);
+user2NameIn.addEventListener('keyup', toggleResetClearButton);
+user1GuessIn.addEventListener('keyup', toggleResetClearButton);
+user2GuessIn.addEventListener('keyup', toggleResetClearButton);
+clearGameBut.addEventListener('click', emptyNameGuessInputs);
 
 function userGuessTester(num1, num2) {
   if (num1 === randomInt) {
