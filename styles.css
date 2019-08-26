@@ -110,6 +110,7 @@ button:hover {
 button.reset-game {
   background-color: #ffffff;
 }
+
 /* USER INPUT SECTION */
 
 
@@ -171,6 +172,13 @@ form.set-range-f {
   margin-bottom: 1em;
 }
 
+p span.users-min-range,
+p span.users-max-range  {
+  color: #525252;
+  font-weight: 900;
+  text-decoration: underline;
+}
+
 form.user1-input-f,
 form.user2-input-f {
   font-weight: 300;
@@ -180,9 +188,20 @@ form.user2-input-f {
   font-size: 1em;
 }
 .user-input-art p {
-  padding: .5em 0 0 0.8em;
+  color: gray;
+  font-size: 1.25em;
+  padding: .5em 0 0 1.3em;
 }
 
+.user1-h5,
+.user2-h {
+  font-size: 1.4em;
+  padding: 1em 0 .5em 1.3em;
+}
+
+.name1-guess1 {
+  font-size: 1.2em;
+}
 .min-range-in,
 .max-range-in,
 .user1-name-in,
@@ -192,33 +211,17 @@ form.user2-input-f {
   padding-left: 3px;
 }
 
-
-
-.users-min-range,
-.users-max-range {
-  text-decoration: underline;
-  font-weight: 700;
-}
-
-
-
-.user1-h5,
-.user2-h {
-  font-size: 1em;
-  padding: 1em 0 .5em 0.8em;
-}
-
 .user1-name-l,
 .user2-name-l {
-    margin: 0 5.2em 0 0.8em;
+    margin: 0 5.2em 0 1.5em;
 }
 
 
 .user1-name-in,
-.user2-name-in {
-  margin-left: 0.4em;
+.user2-guess-in {
+  /* margin-left: 0.4em;
   margin: 0 3em 0em 0.9em;
-  width: 16.3em;
+  width: 16.3em; */
 }
 
 .user1-guess-l,
