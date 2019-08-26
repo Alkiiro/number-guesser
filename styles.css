@@ -148,21 +148,42 @@ button.reset-game {
   padding: 1em 0 .5em .5em;
 }
 .user1-name-l, .user2-name-l {
-  padding: 0 0.5em;
-  display: block;
+    margin: 0 5.2em 0 0.8em;
 }
 .user1-name-in, .user2-name-in {
-  margin: 0 0 0 0.5em;
-  display: inline-block;
+  margin-left: 0.4em;
+  margin: 0 3em 0em 0.9em;
+  width: 16.3em;
 }
 .user1-guess-l, .user2-guess-l {
-  display: block;
+  margin: 0 0 0 5.5em;
 }
 .user1-guess-in, .user2-guess-in {
-  
+  margin: 0 0 1em 0;
 }
+.user1-input-f {
+}
+.user1-score-out_num1, .User2-score-out_num2 {
+  font-size: 5.9em;
+  color: #f74d9b;
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
+}
+.user-guess-output-art {
+
+}
+.user1-output {
+
+}
+.user2-output {
+
+}
+.name1-guess1 {
+
+}
+
 .pink {
-  background-color: pink;
+  border: 1px solid #f74d9b;
 }
 
 
