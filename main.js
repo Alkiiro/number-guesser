@@ -148,7 +148,7 @@ function toggleClearButton() {
       user1GuessIn.value !== "" ||
       user2GuessIn.value !== "") {
     clearGameBut.disabled = false;
-    clearGameBut.style.backgroundColor = "#6E6E6E"
+    clearGameBut.style.backgroundColor = "#6E6E6E";
   } else {
     clearGameBut.disabled = true;
     clearGameBut.style.backgroundColor = "#D0D2D3";
