@@ -113,6 +113,7 @@ input {
   width: 11.9em;
   height: 2em;
 }
+
 button {
   color: #ffffff;
   background-color: #6e6e6e;
@@ -124,9 +125,11 @@ button {
   text-transform: uppercase;
   margin: 0.9em;
 }
+
 button:hover {
   background-color: #dd1972;
 }
+
 button.reset-game {
   background-color: #ffffff;
 }
@@ -186,6 +189,9 @@ button.reset-game {
   border: 1px solid #f74d9b;
 }
 
+.clear-game-but {
+  background-color: #D0D2D3;
+}
 
 /* GAME RESULTS SECTION */
 
