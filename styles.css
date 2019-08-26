@@ -113,7 +113,15 @@ input {
   width: 11.9em;
   height: 2em;
 }
-
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  padding-right: 30px;
+}
+.min-range-in, .max-range-in, .user1-name-in, .user2-name-in, .user1-guess-in, .user2-guess-in {
+  padding-left: 3px;
+}
 button {
   color: #ffffff;
   background-color: #6e6e6e;
