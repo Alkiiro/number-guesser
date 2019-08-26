@@ -101,7 +101,6 @@ if (num.value === ""){
 //// end code from mod3
 
 clearGameBut.addEventListener('click', function() {
-  console.log("clear game button")
 });
 
 deleteWinnerCardBut.addEventListener('click', function() {
@@ -143,18 +142,32 @@ submitGuessBut.addEventListener('click', function() {
      // validateName2(user2NameIn); // check names
 });
 
-function enableClearButton() {
-  var disableClearButton = document.querySelector(".clear-game").disabled;
-  // var disableClearButtonHover = document.querySelector(".clear-game"). 
-  if (usersMinRange.value !== "") {
-    disableClearButton = false;
-    document.querySelector(".clear-game").style.backgroundColor = #D0D2D3;
-
+function toggleClearButton() {
+  if (user1NameIn.value !== "" ||
+      user2NameIn.value !== "" ||
+      user1GuessIn.value !== "" ||
+      user2GuessIn.value !== "") {
+    clearGameBut.disabled = false;
+    clearGameBut.style.backgroundColor = "#6E6E6E"
   } else {
-    disableClearButton = true;
+    clearGameBut.disabled = true;
+    clearGameBut.style.backgroundColor = "#D0D2D3";
   }
-
 }
+
+function clearValues() {
+  user1NameIn.value = "";
+  user2NameIn.value = "";
+  user1GuessIn.value = "";
+  user2GuessIn.value = "";
+  toggleClearButton();
+}
+
+user1NameIn.addEventListener('keyup', toggleClearButton);
+user2NameIn.addEventListener('keyup', toggleClearButton);
+user1GuessIn.addEventListener('keyup', toggleClearButton);
+user2GuessIn.addEventListener('keyup', toggleClearButton);
+clearGameBut.addEventListener('click', clearValues)
 
 function userGuessTester(num1, num2) {
   if (num1 === randomInt) {
