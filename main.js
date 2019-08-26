@@ -109,12 +109,38 @@ deleteWinnerCardBut.addEventListener('click', function() {
 
 resetGameBut.addEventListener('click', function() {
   console.log("reset game button")
-  user1GuessIn.value = '';
-  user2GuessIn.value = '';
-  user1GuessOutP.innerText = "";
-  user2GuessOutP.innerText = "";
-
+  user1NameIn.value = "";
+  user2NameIn.value = "";
+  user1GuessIn.value = "";
+  user2GuessIn.value = "";
 });
+
+function toggleResetButton() {
+  if (user1NameIn.value !== "" ||
+      user2NameIn.value !== "" ||
+      user1GuessIn.value !== "" ||
+      user2GuessIn.value !== "") {
+    resetGameBut.disabled = false;
+    resetGameBut.style.backgroundColor = "#6E6E6E";
+  } else {
+    resetGameBut.disabled = true;
+    resetGameBut.style.backgroundColor = "#D0D2D3";
+  }
+}
+
+function resetGame() {
+  user1NameIn.value = "";
+  user2NameIn.value = "";
+  user1GuessIn.value = "";
+  user2GuessIn.value = "";
+  toggleResetButton();
+}
+
+user1NameIn.addEventListener('keyup', toggleResetButton);
+user2NameIn.addEventListener('keyup', toggleResetButton);
+user1GuessIn.addEventListener('keyup', toggleResetButton);
+user2GuessIn.addEventListener('keyup', toggleResetButton);
+resetGameBut.addEventListener('click', resetGame);
 
 updateRangeBut.addEventListener('click', function() {
     getRandomInt(minRangeIn.value, maxRangeIn.value);
