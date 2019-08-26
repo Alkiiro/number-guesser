@@ -1,3 +1,5 @@
+/* GENERAL PAGE STYLES */
+
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +9,8 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+/* HEADER SUBHEAD STYLES */
+
 header {
   background-color: #404042;
   text-align: center;
@@ -15,27 +19,28 @@ header {
 h1 {
   color: #dd1972;
   font-weight: 300;
-  letter-spacing: -.001em;
   font-size: 3.9em;
-  text-transform: uppercase;
+  letter-spacing: -.001em;
   padding: 0.2em 0 0 0;
+  text-transform: uppercase;
 }
 
 h1 span {
   font-weight: 700;
 }
+
 header p {
   color: #ffffff;
-  text-transform: uppercase;
-  word-spacing: .25em;
   font-weight: 300;
   padding: 0px 0 1.1em 0;
+  text-transform: uppercase;
+  word-spacing: .25em;
 }
 
 .subhead {
+  padding-top: 0.4em;
   line-height: 0.5;
   text-align: center;
-  padding-top: 0.4em;
 }
 
 .subhead span {
@@ -45,23 +50,26 @@ header p {
 
 .subhead span:before,
 .subhead span:after {
+  border-bottom: 1px solid white;
   content: "";
   position: absolute;
   height: 5px;
-  border-bottom: 1px solid white;
   top: 0;
   width: 100px;
 }
 
 .subhead span:before {
-  right: 100%;
   margin-right: 15px;
+  right: 100%;
 }
 
 .subhead span:after {
   left: 100%;
   margin-left: 15px;
 }
+
+/* MAIN SECTION STYLES */
+
 main {
   display: flex;
 }
@@ -79,56 +87,67 @@ main {
 }
 
 .set-range-art {
-  width: 95%;
   margin: auto;
   padding: 0 0 1em;
+  width: 95%;
+
 
 }
 .set-range-art h5 {
+  color: #404042;
   font-size: 1em;
   font-weight: 700;
-  color: #404042;
 
 }
 
 form.set-range-f {
-  border: 0.1em solid #D0D2d3;
-  /* margin: 0.3em 1.9px 1.9px 1.9px; */
   background-color: #ffffff;
+  border: 0.1em solid #D0D2d3;
   padding: 1em 0 0.5em 0.9em;
 
 }
+
 .set-range-h {
   display: block;
   padding: 0.7em 0 0.1em 0;
 }
+
 .min-range-l, .max-range-l {
   font-weight: 300;
   font-size: 0.8em;
   display: block;
 }
+
 input {
   border: 0.15em solid #D0D2d3;
   border-radius: 1.8px;
-  width: 11.9em;
   height: 2em;
+  width: 11.9em;
 }
+
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
   padding-right: 30px;
+  margin: 0;
+  -webkit-appearance: none;
+
 }
-.min-range-in, .max-range-in, .user1-name-in, .user2-name-in, .user1-guess-in, .user2-guess-in {
+
+.min-range-in,
+.max-range-in,
+.user1-name-in,
+.user2-name-in,
+.user1-guess-in,
+.user2-guess-in {
   padding-left: 3px;
 }
+
 button {
-  color: #ffffff;
   background-color: #6e6e6e;
-  font-size: 0.7em;
   border-radius: 1.1em;
   border: 0;
-  /* outline: 0; */
+  color: #ffffff;
+  font-size: 0.7em;
   padding: 0.2em 1.15em;
   text-transform: uppercase;
   margin: 0.9em;
@@ -141,47 +160,72 @@ button:hover {
 button.reset-game {
   background-color: #ffffff;
 }
-.users-min-range, .users-max-range {
+.users-min-range,
+.users-max-range {
   text-decoration: underline;
   font-weight: 700;
 }
 .user-input-art {
   border: 0.1em solid #D0D2d3;
-  width: 94.4%;
   margin: auto;
   padding: 0;
+  width: 94.4%;
+
 }
 .user-input-art p {
   padding: .5em;
 }
+
 .user1-h5, .user2-h {
   font-size: 1em;
   padding: 1em 0 .5em .5em;
 }
-.user1-name-l, .user2-name-l {
+
+.user1-name-l,
+.user2-name-l {
     margin: 0 5.2em 0 0.8em;
 }
-.user1-name-in, .user2-name-in {
+
+.user1-name-in,
+.user2-name-in {
   margin-left: 0.4em;
   margin: 0 3em 0em 0.9em;
   width: 16.3em;
 }
-.user1-guess-l, .user2-guess-l {
+
+.user1-guess-l,
+.user2-guess-l {
   margin: 0 0 0 5.5em;
 }
-.user1-guess-in, .user2-guess-in {
+
+.user1-guess-in,
+.user2-guess-in {
   margin: 0 0 1em 0;
 }
+
 .user1-input-f {
 }
-.user1-score-out-num1, .user2-score-out-num1 {
-  font-size: 5.9em;
+
+.user1-score-out-num1,
+.user2-score-out-num1 {
   color: #f74d9b;
-  font-weight: 700;
   font-family: "Open Sans", sans-serif;
+  font-size: 5.9em;
+  font-weight: 700;
 }
+
+.latest-score-h5 {
+  display: block;
+}
+
 .user-guess-output-art {
+  border: 0.1em solid #D0D2d3;
+  margin: auto;
+  padding: 0;
+  width: 94.4%;
+
 }
+
 .hidden {
   display: none;
 
@@ -195,6 +239,11 @@ button.reset-game {
 .name1-guess1 {
 
 }
+.user1-output,
+.user2-output {
+  display: inline-grid;
+  text-align: center;
+}
 
 .pink {
   border: 1px solid #f74d9b;
@@ -207,33 +256,33 @@ button.reset-game {
 /* GAME RESULTS SECTION */
 
 .game-results-sec {
-  display: flex;
-  flex-direction: column;
   align-items: center;
   background-color: #D1D2D4;
+  display: flex;
+  flex-direction: column;
   width: 50%;
-  height
 }
 
 .winnercard-art {
+  background-color: #FFFFFF;
+  border: 2px #6e6e6e solid;
   display: flex;
   flex-direction: column;
   margin: 1em 0 0 0;
-  border: 2px #6e6e6e solid;
-  background-color: #FFFFFF;
-  width: 90%;
   text-transform: uppercase;
+  width: 90%;
 }
 
 .user1-vs-user2-p-winnercard {
+  align-items: center;
+  color: #6e6e6e;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin: .8em 0 .8em 0;
-  color: #6e6e6e;
   font-size: 1.2em;
   font-weight: 700;
+  justify-content: center;
+  margin: .8em 0 .8em 0;
+
 }
 
 .vs {
@@ -244,59 +293,59 @@ button.reset-game {
 }
 
 hr {
+  border: 1px solid;
+  color: #D0D2d3;
   margin-left: auto;
   margin-right: auto;
   width: 95%;
-  border: 1px solid;
-  color: #D0D2d3;
 }
 
 .winner-name-h3 {
+  color: #6e6e6e;
   display: flex;
   justify-content: center;
   margin: .6em 0 0 0;
   font-size: 2.5em;
-  color: #6e6e6e;
   text-transform: uppercase;
 }
 
 .winner-title {
-  display: flex;
-  justify-content: center;
-  margin: 0 0 .6em 0;
   color: grey;
+  display: flex;
   font-weight: 300;
   font-size: 2.5em;
+  justify-content: center;
+  margin: 0 0 .6em 0;
 }
 
 .gamefacts-deletebut-div {
+  align-items: center;
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: space-around;
   height: 6vh;
 }
 
 .delete-winnercard-but {
-  text-align: center;
   border-radius: 50%;
-  padding: 0;
-  height: 25px;
-  width: 25px;
   font-size: 1em;
+  height: 25px;
+  padding: 0;
+  text-align: center;
+  width: 25px;
 }
 
 .winner-total-guesses-p, .win-time-p {
-  display: flex;
   align-items: center;
+  display: flex;
   color: grey;
   font-size: 1.2em;
   font-weight: 300;
 }
 
 .winner-total-guesses-p span, .win-time-p span {
-  font-weight: bold;
   color: #6e6e6e;
+  font-weight: bold;
   margin: .3em;
 }
 
