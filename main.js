@@ -40,80 +40,23 @@ function getRandomInt(min, max) {
 var minRangeIn = document.querySelector('.min-range-in');
 var maxRangeIn = document.querySelector('.max-range-in');
 
-          // function validateName1(name1) {
-          //   var regex = /^[0-9a-zA-Z]+$/;
-          //   var user1AddClassError = document.querySelector('.user1-name-in');
-          //   if (regex.test(name1.value) !== true){
-          //     console.log("name1 error")
-          //     user1AddClassError.classList.add('pink');
-          //   } else {
-          //     console.log("name1 OK")
-          //   }
-          // }
-          // function validateName2(name2) {
-          //   var regex = /^[0-9a-zA-Z]+$/;
-          //   var user2AddClassError = document.querySelector('.user2-name-in');
-          //   if (regex.test(name2.value) !== true){
-          //     console.log("name2 error")
-          //     user2AddClassError.classList.add('pink');
-          //   } else {
-          //     console.log("name2 OK")
-          //   }
-          // }
-
-function validateNumber(num, error) {
-var numGuess = parseInt(num.value);
-var regex = /^[0-9]+$/;
-if (regex.test(numGuess) !== true){
-  addError(num);
-  error.removeAttribute('hidden', false);
-}
-if (num.value === ""){
-  error.setAttribute('hidden', true);
-  removeError(num);
-}
-}
-
-////// begin code from mod3
-
-        // function validateNames(challName) {
-        //   var regex = /^[0-9a-zA-Z]+$/;
-        //   if (regex.test(challName.value) !== true){
-        //     addError(challName);
-        //   } else {
-        //     removeError(challName);
-        //   }
-        // }
-        //
-        // function validateNumber(num, error) {
-        //   var numGuess = parseInt(num.value);
-        //   var regex = /^[0-9]+$/;
-        //   if (regex.test(numGuess) !== true){
-        //     addError(num);
-        //     error.removeAttribute('hidden', false);
-        //   }
-        //   if (num.value === ""){
-        //     error.setAttribute('hidden', true);
-        //     removeError(num);
-        //   }
-        // }
-
-//// end code from mod3
-
-clearGameBut.addEventListener('click', function() {
-});
-
 deleteWinnerCardBut.addEventListener('click', function() {
   console.log("delete winner card button")
 });
 
-resetGameBut.addEventListener('click', function() {
-  console.log("reset game button")
+resetGameBut.addEventListener('click', resetGame());
+
+function resetGame() {
+  emptyNameGuessInputs();
+  toggleResetButton();
+  }
+
+function emptyNameGuessInputs() {
   user1NameIn.value = "";
   user2NameIn.value = "";
   user1GuessIn.value = "";
   user2GuessIn.value = "";
-});
+}
 
 function toggleResetButton() {
   if (user1NameIn.value !== "" ||
@@ -126,14 +69,6 @@ function toggleResetButton() {
     resetGameBut.disabled = true;
     resetGameBut.style.backgroundColor = "#D0D2D3";
   }
-}
-
-function resetGame() {
-  user1NameIn.value = "";
-  user2NameIn.value = "";
-  user1GuessIn.value = "";
-  user2GuessIn.value = "";
-  toggleResetButton();
 }
 
 user1NameIn.addEventListener('keyup', toggleResetButton);
