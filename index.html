@@ -33,9 +33,12 @@
             <h5 class="user1-h5">Challenger 1</h5>
             <div class="name1-guess1">
                 <label class="user1-name-l">Name</label>
+                <!-- <div class="">
+                  <img src="images/error-icon.svg" alt="error icon"><p>Enter a name</p>
+                </div> -->
                 <label class="user1-guess-l">Guess</label>
               </div>
-              <input class="user1-name-in" type="text" name="user1-name" value="">
+              <input class="user1-name-in" type="text" name="user1-name" value="" required pattern="[a-zA-Z0-9 ]">
               <input class="user1-guess-in" type="number" name="user1-guess" value="">
           </form>
 
@@ -45,7 +48,7 @@
             <label class="user2-name-l">Name</label>
             <label class="user2-guess-l">Guess</label>
             </div>
-              <input class="user2-name-in" type="text" name="user2-name" value="">
+              <input class="user2-name-in" type="text" name="user2-name" value="" required pattern="[a-zA-Z0-9 ]" size="200px">
               <input class="user2-guess-in" type="number" name="user2-guess" value="">
 
           </form>
@@ -59,16 +62,17 @@
           <h5 class="latest-score-h5">Latest Score</h5>
           <div class="user1-output">
             <p class="user1-name-p-guess-out">Challenger 1 Name</p>
-            <p class="user1-score-out-num1">97</p>
-            <p class="user1-guess-out-p">User1 Guess</p>
-            <p class="user1-guess-feedback-p">Corresponding Feedback</p>
+            <p class="user1-current-guess">current guess</p>
+            <p class="user1-score-out-num1">-</p>
+            <!-- <p class="user1-guess-out-p">User1 Guess</p> -->
+            <p class="user1-guess-feedback-p">make a guess</p>
           </div>
-<!-- ARTICLE DIVIDER VERTICAL LINE: FIGURE IT OUT -->
           <div class="user2-output">
             <p class="user2-name-p-guess-out">Challenger 2 Name</p>
-            <p class="user2-score-out-num1">3</p>
-            <p class="user2-guess-out-p">User2 Guess</p>
-            <p class="user2-guess-feedback-p">Corresponding Feedback</p>
+            <p class="user2-current-guess">current guess</p>
+            <p class="user2-score-out-num1">-</p>
+            <!-- <p class="user2-guess-out-p">User2 Guess</p> -->
+            <p class="user2-guess-feedback-p">make a guess</p>
           </div>
         </article>
       </section>
