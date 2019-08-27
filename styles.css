@@ -438,22 +438,34 @@ hr {
 .win-time-p, .win-time span {
 }
 
-@media  only screen and (max-width: 375px) {
+/* ############# MOBLE STYLES ############# */
+
+@media  only screen and (min-width: 375px) {
   header {
-    width: 30.1em;
+    width: 23.7em;
   }
   h1 {
-    font-size: 3em;
+    font-size: 2.1em;
   }
   header p {
     font-size: 0.9em;
   }
+
+  .subhead span:before, .subhead span:after {
+    border-bottom: 1px solid white;
+    content: "";
+    position: absolute;
+    height: 5px;
+    top: 0;
+    width: 47px;
+  }
+
   main {
     display: flex;
     flex-direction: column;
   }
   .user-input-sec {
-    width: 30em;
+    width: 23.5em;
   }
   .user1-name-in,
   .user2-name-in {
@@ -461,13 +473,18 @@ hr {
     width: 34.1em;
   }
   .game-results-sec {
-    width: 92.7%;
   }
   input {
-    width: 26em;
+    width: 13em;
+  }
+  .max-range-in {
+    margin: 0;
   }
   button {
-    margin: 0.7em 0 0.5em 0.6em;
+    margin: 0.7em 0 0.5em 0em;
+  }
+  .max-range-l {
+    padding-left: 0;
   }
   .winnercard-art {
     width: 94%;
