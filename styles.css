@@ -84,28 +84,32 @@ main {
 input {
   border: 0.15em solid #D0D2d3;
   border-radius: 1.8px;
-  height: 3.3em;
-  width: 10em;
-  margin: 0 1em;
-  padding: 0 3.5em 0 0;
+  height: 1.8em;
+  margin: 0 0.1em;
+  padding: 0 -0.5em 0 0;
+  font-size: 1.5em;
 }
 
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
-  padding-right: 30px;
   margin: 0;
+  padding-left: 1px;
   -webkit-appearance: none;
-
 }
+
+input[type=text] {
+  padding-left: 1px;
+}
+
 button {
   background-color: #6e6e6e;
   border-radius: 1.1em;
   border: 0;
   color: #ffffff;
   font-size: 1.3em;
-  padding: 0.4em 1.15em;
   text-transform: uppercase;
-  margin: 0.9em;
+  margin: 0.6em;
+  padding: 0.4em 1em;
 }
 
 button:hover {
@@ -146,7 +150,7 @@ form.set-range-f {
   color: #404042;
   font-size: 1.3em;
   font-weight: 700;
-  margin-left: 0.6em;
+  margin-left: 0.3em;
 }
 
 .min-range-div {
@@ -169,7 +173,10 @@ form.set-range-f {
   display: block;
   padding: 0.5em 0 .1em 0;
   font-size: 1.2em;
-  margin-left: 0.6em;
+  margin-left: 0.2em;
+}
+.max-range-l {
+  padding-left: 1.1em;
 }
 /* USER INPUT ART SECTION */
 .user-input-art {
@@ -199,13 +206,13 @@ form.user2-input-f {
 .user-input-art p {
   color: gray;
   font-size: 1.25em;
-  padding: .5em 0 0 1.3em;
+  padding: .5em 0 0 .9em;
 }
 
 .user1-h5,
 .user2-h {
   font-size: 1.4em;
-  padding: 1em 0 .5em 1.1em;;
+  padding: 1em 0 .5em .9em;
 }
 
 .name1-guess1,
@@ -215,9 +222,11 @@ form.user2-input-f {
 
 .min-range-in,
 .max-range-in {
-padding: 0 10.1em 0 0;
+  padding: 0;
 }
-
+.max-range-in {
+  margin-left: 1em;
+}
 input.user1-guess-in,
 input.user2-guess-in {
 
@@ -225,26 +234,31 @@ input.user2-guess-in {
 
 .user1-name-l,
 .user2-name-l {
-  margin: 0 5.2em 0 1.3em;
+  margin: 0 5.2em 0 1.2em;
 }
 
 
 .user1-name-in,
 .user2-name-in {
-  margin: 0 0 0 1.9em;
-  width: 37.1em;
+  margin: 0 0 0 .9em;
+  width: 14.9em;
 }
 
 .user1-guess-l,
 .user2-guess-l {
   margin: 0 0 0 5.5em;
-  padding-left: 11em;
+  padding-left: 7em;
 }
-
+.game-controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 1em 0;
+}
 .user1-guess-in,
 .user2-guess-in {
   padding-left: 0;
-  margin-left: 2em;
+  margin-left: 1em;
 }
 
 
@@ -424,8 +438,39 @@ hr {
 .win-time-p, .win-time span {
 }
 
-@media  (max-width: 812px) {
+@media  only screen and (max-width: 375px) {
   header {
-    width: 812px;
+    width: 30.1em;
+  }
+  h1 {
+    font-size: 3em;
+  }
+  header p {
+    font-size: 0.9em;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+  .user-input-sec {
+    width: 30em;
+  }
+  .user1-name-in,
+  .user2-name-in {
+    margin: 0 0 0 0.9em;
+    width: 34.1em;
+  }
+  .game-results-sec {
+    width: 92.7%;
+  }
+  input {
+    width: 26em;
+  }
+  button {
+    margin: 0.7em 0 0.5em 0.6em;
+  }
+  .winnercard-art {
+    width: 94%;
+    margin-bottom: 1em;
   }
 }
