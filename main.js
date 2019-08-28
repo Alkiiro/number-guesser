@@ -18,6 +18,13 @@ var user2GuessOutP = document.querySelector('.user2-guess-out-p');
 var user1GuessFeedbackP = document.querySelector('.user1-guess-feedback-p');
 var user2GuessFeedbackP = document.querySelector('.user2-guess-feedback-p');
 
+var user1ScoreOutNum1 = document.querySelector('.user1-score-out-num1');
+var user2ScoreOutNum1 = document.querySelector('.user2-score-out-num1');
+
+// Possible Random Number Range Inputs
+var minRangeIn = document.querySelector('.min-range-in');
+var maxRangeIn = document.querySelector('.max-range-in');
+
 // update current Range
 var usersMinRange = document.querySelector('.users-min-range');
 var usersMaxRange = document.querySelector('.users-max-range');
@@ -34,6 +41,7 @@ function getRandomInt(min, max) {
   max = Math.floor(max);
   randomInt =  Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
 }
+
 // Possible Random Number Range Inputs
 var minRangeIn = document.querySelector('.min-range-in');
 var maxRangeIn = document.querySelector('.max-range-in');
@@ -59,6 +67,14 @@ window.onload = onPageLoad();
 
 function onPageLoad() {
   toggleResetClearButton();
+
+function validateNumber(num, error) {
+var numGuess = parseInt(num.value);
+var regex = /^[0-9]+$/;
+if (regex.test(numGuess) !== true){
+  addError(num);
+  error.removeAttribute('hidden', false);
+
 }
 
 // CLEAR GAME BUTTON
@@ -80,10 +96,13 @@ function rangeErrorMessages() {
   if (minRangeIn.value > maxRangeIn.value || maxRangeIn.value < minRangeIn.value) {
     invalidRangeError()
 }
-
 function invalidRangeError() {
   
 }
+
+ clearGameBut.addEventListener('click', function() {
+});
+
 
 // INVOKED FUNCTIONS
 function emptyNameGuessInputs() {
@@ -110,7 +129,6 @@ function toggleResetClearButton() {
   }
 }
 
-
 updateRangeBut.addEventListener('click', function() {
     getRandomInt(minRangeIn.value, maxRangeIn.value);
     console.log(randomInt);
@@ -120,10 +138,11 @@ updateRangeBut.addEventListener('click', function() {
 });
 
 submitGuessBut.addEventListener('click', function() {
+    
      user1NamePGuessOut.innerText = user1NameIn.value;
      user2NamePGuessOut.innerText = user2NameIn.value;
-     user1GuessOutP.innerText = user1GuessIn.value;
-     user2GuessOutP.innerText = user2GuessIn.value;
+     user1ScoreOutNum1.innerText = user1GuessIn.value;
+     user2ScoreOutNum1.innerText = user2GuessIn.value;
      user1NamePWinnercard.innerText = user1NameIn.value;
      user2NamePWinnercard.innerText = user2NameIn.value;
      userGuessTester(parseInt(user1GuessIn.value), parseInt(user2GuessIn.value));
