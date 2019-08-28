@@ -42,11 +42,32 @@ deleteWinnerCardBut.addEventListener('click', function() {
   console.log("delete winner card button")
 });
 
+user1NameIn.addEventListener('keyup', toggleResetClearButton);
+user2NameIn.addEventListener('keyup', toggleResetClearButton);
+user1GuessIn.addEventListener('keyup', toggleResetClearButton);
+user2GuessIn.addEventListener('keyup', toggleResetClearButton);
+clearGameBut.addEventListener('click', clearGame);
+
+user1NameIn.addEventListener('keyup', toggleResetClearButton);
+user2NameIn.addEventListener('keyup', toggleResetClearButton);
+user1GuessIn.addEventListener('keyup', toggleResetClearButton);
+user2GuessIn.addEventListener('keyup', toggleResetClearButton);
+resetGameBut.addEventListener('click', resetGame);
+
+// ON PAGE LOAD
+window.onload = onPageLoad();
+
+function onPageLoad() {
+  toggleResetClearButton();
+}
+
+// CLEAR GAME BUTTON
 function clearGame() {
   emptyNameGuessInputs();
   toggleResetClearButton();
 }
 
+// RESET GAME BUTTON
 function resetGame() {
   emptyNameGuessInputs();
   toggleResetClearButton();
@@ -54,6 +75,17 @@ function resetGame() {
   console.log(randomInt);
   }
 
+// ERROR MESSAGES
+function rangeErrorMessages() {
+  if (minRangeIn.value > maxRangeIn.value || maxRangeIn.value < minRangeIn.value) {
+    invalidRangeError()
+}
+
+function invalidRangeError() {
+  
+}
+
+// INVOKED FUNCTIONS
 function emptyNameGuessInputs() {
   user1NameIn.value = "";
   user2NameIn.value = "";
@@ -78,19 +110,6 @@ function toggleResetClearButton() {
   }
 }
 
-user1NameIn.addEventListener('keyup', toggleResetClearButton);
-user2NameIn.addEventListener('keyup', toggleResetClearButton);
-user1GuessIn.addEventListener('keyup', toggleResetClearButton);
-user2GuessIn.addEventListener('keyup', toggleResetClearButton);
-clearGameBut.addEventListener('click', clearGame);
-
-user1NameIn.addEventListener('keyup', toggleResetClearButton);
-user2NameIn.addEventListener('keyup', toggleResetClearButton);
-user1GuessIn.addEventListener('keyup', toggleResetClearButton);
-user2GuessIn.addEventListener('keyup', toggleResetClearButton);
-resetGameBut.addEventListener('click', resetGame);
-
-resetGameBut.addEventListener('click', resetGame());
 
 updateRangeBut.addEventListener('click', function() {
     getRandomInt(minRangeIn.value, maxRangeIn.value);
