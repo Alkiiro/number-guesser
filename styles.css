@@ -142,7 +142,6 @@ form.set-range-f {
   background-color: #ffffff;
   border: 0.1em solid #D0D2d3;
   padding: 1em 0 0.5em 0.9em;
-
 }
 
 .set-range-art {
@@ -161,6 +160,31 @@ form.set-range-f {
 
 .min-range-div {
   display: inline-block;
+}
+
+.error-min-range-div, .error-max-range-div {
+  align-items: baseline;
+  display: flex;
+}
+
+.error-img-min-range-in, .error-img-max-range-in {
+  display: flex;
+  height: 1.2em;
+  width: 1.2em;
+}
+
+.error-img-min-range-in {
+  margin: .3em 0 0 .4em;
+}
+
+.error-img-max-range-in {
+  margin: .3em 0 0 2em;
+}
+
+.error-msg {
+  color: #DD1972;
+  display: flex;
+  margin: 0 0 0 .2em;
 }
 
 .max-range-div {
