@@ -31,26 +31,21 @@
           <p>The Current Range is <span class="users-min-range">1</span> to <span class="users-max-range">100</span></p>
           <form class="user1-input-f" action="index.html" method="get">
             <h5 class="user1-h5">Challenger 1</h5>
-            <div class="name1-guess1">
+              <div class="name1-guess1">
                 <label class="user1-name-l">Name</label>
-                <!-- <div class="">
-                  <img src="images/error-icon.svg" alt="error icon"><p>Enter a name</p>
-                </div> -->
+                <input class="user1-name-in" type="text" name="user1-name" value="">
                 <label class="user1-guess-l">Guess</label>
+                <input class="user1-guess-in" type="number" name="user1-guess" value="">
               </div>
-              <input class="user1-name-in" type="text" name="user1-name" value="">
-              <input class="user1-guess-in" type="number" name="user1-guess" value="">
           </form>
-
           <form class="user2-input-f" action="index.html" method="get">
             <h5 class="user2-h">Challenger 2</h5>
             <div class="name2-guess2">
             <label class="user2-name-l">Name</label>
-            <label class="user2-guess-l">Guess</label>
-            </div>
-              <input class="user2-name-in" type="text" name="user2-name" value="" required pattern="[a-zA-Z0-9 ]" size="200px">
+              <input class="user2-name-in" type="text" name="user2-name" value="">
+              <label class="user2-guess-l">Guess</label>
               <input class="user2-guess-in" type="number" name="user2-guess" value="">
-
+            </div>
           </form>
           <div class="game-controls">
             <button class="submit-guess-but" type="button" name="submit-guess">Submit Guess</button>
