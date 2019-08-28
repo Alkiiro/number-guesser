@@ -33,8 +33,6 @@ function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   randomInt =  Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
-  // usersMinRange.innerText = minRangeIn.value;
-  // usersMaxRange.innerText = maxRangeIn.value;
 }
 // Possible Random Number Range Inputs
 var minRangeIn = document.querySelector('.min-range-in');
@@ -44,8 +42,6 @@ deleteWinnerCardBut.addEventListener('click', function() {
   console.log("delete winner card button")
 });
 
-resetGameBut.addEventListener('click', resetGame());
-
 function clearGame() {
   emptyNameGuessInputs();
   toggleResetClearButton();
@@ -54,7 +50,8 @@ function clearGame() {
 function resetGame() {
   emptyNameGuessInputs();
   toggleResetClearButton();
-  getRandomInt();
+  getRandomInt(minRangeIn.value, maxRangeIn.value)
+  console.log(randomInt);
   }
 
 function emptyNameGuessInputs() {
@@ -93,14 +90,14 @@ user1GuessIn.addEventListener('keyup', toggleResetClearButton);
 user2GuessIn.addEventListener('keyup', toggleResetClearButton);
 resetGameBut.addEventListener('click', resetGame);
 
+resetGameBut.addEventListener('click', resetGame());
+
 updateRangeBut.addEventListener('click', function() {
     getRandomInt(minRangeIn.value, maxRangeIn.value);
     console.log(randomInt);
     usersMinRange.innerText = minRangeIn.value;
     usersMaxRange.innerText = maxRangeIn.value;
     console.log(minRangeIn.value, maxRangeIn.value);
-    // isUserInputANumber(parseInt(user1GuessIn.value), parseInt(user2GuessIn.value));
-
 });
 
 submitGuessBut.addEventListener('click', function() {
@@ -114,24 +111,7 @@ submitGuessBut.addEventListener('click', function() {
 
      user1GuessFeedback(parseInt(user1GuessIn.value));
      user2GuessFeedback(parseInt(user2GuessIn.value));
-
-     // validateName1(user1NameIn); // check names
-     // validateName2(user2NameIn); // check names
 });
-
-// function clearValues() {
-//   user1NameIn.value = "";
-//   user2NameIn.value = "";
-//   user1GuessIn.value = "";
-//   user2GuessIn.value = "";
-//   toggleClearButton();
-// }
-
-user1NameIn.addEventListener('keyup', toggleResetClearButton);
-user2NameIn.addEventListener('keyup', toggleResetClearButton);
-user1GuessIn.addEventListener('keyup', toggleResetClearButton);
-user2GuessIn.addEventListener('keyup', toggleResetClearButton);
-clearGameBut.addEventListener('click', emptyNameGuessInputs);
 
 function userGuessTester(num1, num2) {
   if (num1 === randomInt) {
