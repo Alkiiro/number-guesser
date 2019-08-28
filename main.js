@@ -17,10 +17,10 @@ var user1GuessOutP = document.querySelector('.user1-guess-out-p');
 var user2GuessOutP = document.querySelector('.user2-guess-out-p');
 var user1GuessFeedbackP = document.querySelector('.user1-guess-feedback-p');
 var user2GuessFeedbackP = document.querySelector('.user2-guess-feedback-p');
-
 var user1ScoreOutNum1 = document.querySelector('.user1-score-out-num1');
 var user2ScoreOutNum1 = document.querySelector('.user2-score-out-num1');
-
+var maxRangeError = document.querySelector('.error-max-range-div');
+var minRangeError = document.querySelector('.error-min-range-div')
 // Possible Random Number Range Inputs
 var minRangeIn = document.querySelector('.min-range-in');
 var maxRangeIn = document.querySelector('.max-range-in');
@@ -67,6 +67,7 @@ window.onload = onPageLoad();
 
 function onPageLoad() {
   toggleResetClearButton();
+  invalidRangeErrorHidden();
 }
 
 function validateNumber(num, error) {
@@ -93,14 +94,22 @@ function resetGame() {
 }
 
 // ERROR MESSAGES
-function rangeErrorMessages() {
+function toggleRangeError() {
   if (minRangeIn.value > maxRangeIn.value || maxRangeIn.value < minRangeIn.value) {
-    invalidRangeError()
+    invalidRangeErrorVisible();
+  } else {
+    invalidRangeErrorHidden();
   }
 };
 
-function invalidRangeError() {
+function invalidRangeErrorVisible() {
+  maxRangeError.style.visibility = 'visible';
+  minRangeError.style.visibility = 'visible';
+}
 
+function invalidRangeErrorHidden() {
+  maxRangeError.style.visibility = 'hidden';
+  minRangeError.style.visibility = 'hidden';
 }
 
  clearGameBut.addEventListener('click', function() {
@@ -138,6 +147,7 @@ updateRangeBut.addEventListener('click', function() {
     usersMinRange.innerText = minRangeIn.value;
     usersMaxRange.innerText = maxRangeIn.value;
     console.log(minRangeIn.value, maxRangeIn.value);
+    toggleRangeError();
 });
 
 submitGuessBut.addEventListener('click', function() {
