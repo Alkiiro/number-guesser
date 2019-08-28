@@ -67,15 +67,16 @@ window.onload = onPageLoad();
 
 function onPageLoad() {
   toggleResetClearButton();
+}
 
 function validateNumber(num, error) {
 var numGuess = parseInt(num.value);
 var regex = /^[0-9]+$/;
-if (regex.test(numGuess) !== true){
+if (regex.test(numGuess) !== true) {
   addError(num);
   error.removeAttribute('hidden', false);
-
-}
+  }
+};
 
 // CLEAR GAME BUTTON
 function clearGame() {
@@ -89,15 +90,17 @@ function resetGame() {
   toggleResetClearButton();
   getRandomInt(minRangeIn.value, maxRangeIn.value)
   console.log(randomInt);
-  }
+}
 
 // ERROR MESSAGES
 function rangeErrorMessages() {
   if (minRangeIn.value > maxRangeIn.value || maxRangeIn.value < minRangeIn.value) {
     invalidRangeError()
-}
+  }
+};
+
 function invalidRangeError() {
-  
+
 }
 
  clearGameBut.addEventListener('click', function() {
@@ -138,7 +141,7 @@ updateRangeBut.addEventListener('click', function() {
 });
 
 submitGuessBut.addEventListener('click', function() {
-    
+
      user1NamePGuessOut.innerText = user1NameIn.value;
      user2NamePGuessOut.innerText = user2NameIn.value;
      user1ScoreOutNum1.innerText = user1GuessIn.value;
@@ -146,7 +149,6 @@ submitGuessBut.addEventListener('click', function() {
      user1NamePWinnercard.innerText = user1NameIn.value;
      user2NamePWinnercard.innerText = user2NameIn.value;
      userGuessTester(parseInt(user1GuessIn.value), parseInt(user2GuessIn.value));
-
      user1GuessFeedback(parseInt(user1GuessIn.value));
      user2GuessFeedback(parseInt(user2GuessIn.value));
 });
