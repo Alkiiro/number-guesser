@@ -469,248 +469,34 @@ hr {
 
 /* ############# MOBLE STYLES ##################################################### */
 
-@media only screen  (min-width: 320px){
-
-body {
+@media only screen and (min-width: 319px) and (max-width: 900px){
+main {
   display: flex;
   flex-direction: column;
-  width: 308%;
+  margin: 0;
+  width: 262%;
 
 }
-
-/* header {
-  margin: 0 0 0 -8px;
-  width: 103%;
+header {
+  display: flex;
+  flex-direction: column;
+  width: 131%;
 }
-
 h1 {
-  font-size: 2em;
-  margin-left: 0.5em;
-} */
-
-/* header p {
-  font-size: 0.9em;
+ font-size: 2.7em;
 }
-
-.subhead {
-  font-size: 0.8em;
-  margin-left: 1.2em;
-} */
-
-/* .subhead span:before, .subhead span:after {
-  border-bottom: 1px solid white;
-  content: "";
-  position: absolute;
-  height: 5px;
-  top: 0;
-  width: 33px;
-} */
-
-/* .subhead span:before {
-  margin-right: 6px;
-  right: 100%;
-} */
-
-/* .subhead span:after {
-  margin-left: 6px;
-  left: 100%;
-} */
-/* main {
-  display: flex;
-  flex-direction: column;
-} */
-/* .min-range-div,
-.max-range-div {
-    width: 100%;
-  } */
-
-/* .min-range-in,
-.max-range-in {
-  margin: 0;
-  padding: 0;
-  width: 95%;
-} */
-
-/* .error-img-max-range-in {
-  margin: .3em 0 0 0.3em;
-} */
-/* .user-input-art p {
-    color: gray;
-    font-size: 1.25em;
-    padding: .5em 0 0 0.5em;
-} */
-/* .user1-h5, .user2-h {
-  padding: 1em 0 .5em 0.5em;
-} */
-
-/* .user2-h {
-  margin-top: 0;
-} */
-/* .user1-guess-in,
-.user2-guess-in {
-  margin: 0 5.2em 0.3em 0.2em;
-  padding-left: 0;
-  width: 95%;
-} */
-
-/* .user1-name-l,
-.user2-name-l {
-  margin: 0 5.2em 0.3em 0.2em;
-  display: block;
-} */
-
-/* .name1-guess1,
-.name2-guess2 {
-  font-size: 1.2em;
-  margin-left: 0.5em;
-  width: 90%;
-} */
-
-/* .user1-guess-l-in,
-.user2-guess-l-in {
-  float: none;
-  font-size: 1.2em;
-  width: 95%;
-  } */
-
-/* input[type=text] {
-  margin-bottom: 0.5em;
-  padding-left: 1px;
-  width: 100%;
-  } */
-
-/* .user1-name-in,
-.user2-name-in,
-.user1-guess-in
-.user2-guess-in {
-margin: 0;
-margin-left: 0;
-padding: 0;
-width: 0;
-} */
-
-/* .user-input-sec {
-  border: 0;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-} */
-
-/* .user1-guess-l,
-.user2-guess-l {
-  margin: 7.6px 0 0.3em .7em;
-  padding-left: 0;
-} */
-
-/* .user-guess-output-art {
-  display: flex;
-  flex-direction: column;
-  width: 93.5%;
-} */
-
-/* .game-controls {
-  display: block;
-  margin: 0.8em 0.5em 0.8em 0.5em;
-  text-align: center;
-} */
-
-/* .game-results-sec {
-} */
-
-/* .max-range-in {
-  margin: 0;
-} */
-/* button {
-  margin: 0.7em 0 0.5em 0em;
-  width: 94.2%;
-} */
-/* .max-range-l {
-  padding-left: 0;
-} */
-/* .user1-output,
-.user2-output {
-  text-align: center;
-  margin: auto;
-} */
-
-/* .user1-output,
-.user2-output {
-  border: none;
-  margin: auto;
-  padding: 0;
-  width: 100%;
-} */
-
-/* .user1-score-out-num1,
-.user2-score-out-num1 {
-
-} */
-
-/* .winnercard-art {
-  width: 94%;
-  margin-bottom: 1em;
-} */
-/* .game-results-sec {
-  width: 100%;
-} */
-
-/* .user1-vs-user2-p-winnercard {
-  font-size: 0.9em;
-  text-align: center;
-} */
-}
-/* @media  only screen and (min-width: 366px) (max-width: 392px) {
-body {
-  display: flex;
-  flex-direction: column;
-  width: 97%;
-  margin: 0 1%;
-
-
-} */
-/* 1116px moble screen  */
-
-/* @media  only screen and (min-width: 393px) (max-width: 424px) {
-body {
-  font-size: 0.8em;
-  margin: 0 1%;
-  width: 97%;
-}
-.error-img-max-range-in {
-  margin: 0;
-}
-.user-input-sec {
-
-}
-.user1-guess-l,
-.user2-guess-l {
-  margin: 0 5.2em 0 1.2em;
-  padding-left: 0;
-}
-.user1-name-l,
-.user2-name-l {
-  margin: 0 5.2em 0 1.2em;
-  display: block;
-}
-.max-range-l {
-  padding-left: 0;
-}
-.max-range-in {
+.max-range-in,
+.error-max-range-div {
   margin-left: 0;
 }
-.user-input-art {
+.game-controls {
+  margin: auto;
+  padding-left: 2em;
+}
+.user1-output,
+.user2-output,
+.user1-name-p-guess-out,
+.user2-name-p-guess-out {
 
 }
-form.user1-input-f, form.user2-input-f {
-
-}
-button {
-  width: 95%;
-}
-
-.user1-output, .user2-output {
-  text-align: center;
-  width: 95%;
-  display: flex;
-  flex-direction: column;
-}
+} /* end moble */
