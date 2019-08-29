@@ -167,17 +167,17 @@ form.set-range-f {
   display: flex;
 }
 
-.error-img-min-range-in, .error-img-max-range-in {
+.error-img-min-range, .error-img-max-range {
   display: flex;
   height: 1.2em;
   width: 1.2em;
 }
 
-.error-img-min-range-in {
+.error-img-min-range {
   margin: .3em 0 0 .4em;
 }
 
-.error-img-max-range-in {
+.error-img-max-range {
   margin: .3em 0 0 2em;
 }
 
@@ -258,9 +258,11 @@ form.user2-input-f {
   float: right;
   width: 38%;
 }
+
 .user2-h {
   margin-top: 5em;
 }
+
 .min-range-in,
 .max-range-in {
   padding: 0;
@@ -292,6 +294,25 @@ form.user2-input-f {
 .user2-guess-in {
   padding-left: 0;
   width: 89%;
+}
+
+.error-name1-div, .error-name2-div, .error-guess1-div, .error-guess2-div {
+  align-items: baseline;
+  display: flex;
+}
+
+.error-img-name1, .error-img-name2 {
+  display: flex;
+  height: 1.2em;
+  margin: .3em 0 0 1em;
+  width: 1.2em;
+}
+
+.error-img-guess1, .error-img-guess2 {
+  display: flex;
+  height: 1.2em;
+  margin: .3em 0 0 .4em;
+  width: 1.2em;
 }
 
 .game-controls {
