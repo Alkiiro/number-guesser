@@ -20,7 +20,12 @@ var user2GuessFeedbackP = document.querySelector('.user2-guess-feedback-p');
 var user1ScoreOutNum1 = document.querySelector('.user1-score-out-num1');
 var user2ScoreOutNum1 = document.querySelector('.user2-score-out-num1');
 var maxRangeError = document.querySelector('.error-max-range-div');
-var minRangeError = document.querySelector('.error-min-range-div')
+var minRangeError = document.querySelector('.error-min-range-div');
+var name1Error = document.querySelector('.error-name1-div');
+var name2Error = document.querySelector('.error-name2-div');
+var guess1Error = document.querySelector('.error-guess1-div');
+var guess2Error = document.querySelector('.error-guess2-div');
+
 // Possible Random Number Range Inputs
 var minRangeIn = document.querySelector('.min-range-in');
 var maxRangeIn = document.querySelector('.max-range-in');
@@ -68,6 +73,10 @@ window.onload = onPageLoad();
 function onPageLoad() {
   toggleResetClearButton();
   invalidRangeErrorHidden();
+  invalidName1ErrorHidden();
+  invalidGuess1ErrorHidden();
+  invalidName2ErrorHidden();
+  invalidGuess2ErrorHidden();
 }
 
 function validateNumber(num, error) {
@@ -93,30 +102,124 @@ function resetGame() {
   console.log(randomInt);
 }
 
+// SUBMIT GUESS BUTTON
+submitGuessBut.addEventListener('click', function() {
+  user1NamePGuessOut.innerText = user1NameIn.value;
+  user2NamePGuessOut.innerText = user2NameIn.value;
+  user1ScoreOutNum1.innerText = user1GuessIn.value;
+  user2ScoreOutNum1.innerText = user2GuessIn.value;
+  user1NamePWinnercard.innerText = user1NameIn.value;
+  user2NamePWinnercard.innerText = user2NameIn.value;
+  userGuessTester(parseInt(user1GuessIn.value), parseInt(user2GuessIn.value));
+  user1GuessFeedback(parseInt(user1GuessIn.value));
+  user2GuessFeedback(parseInt(user2GuessIn.value));
+  toggleName1Error();
+  toggleGuess1Error();
+  toggleName2Error();
+  toggleGuess2Error();
+});
+
 // ERROR MESSAGES
 function toggleRangeError() {
-  if (minRangeIn.value > maxRangeIn.value || maxRangeIn.value < minRangeIn.value) {
+  if (minRangeIn.value >= maxRangeIn.value || maxRangeIn.value <= minRangeIn.value) {
     invalidRangeErrorVisible();
   } else {
     invalidRangeErrorHidden();
   }
 };
 
+function toggleName1Error() {
+  if (user1NameIn.value === "") {
+    invalidName1ErrorVisible();
+  } else {
+    invalidName1ErrorHidden();
+  }
+};
+
+function toggleGuess1Error() {
+  if (user1GuessIn.value === "" ||
+      user1GuessIn.value < minRangeIn.value ||
+      user1GuessIn.value > maxRangeIn.value) {
+    invalidGuess1ErrorVisible();
+  } else {
+    invalidGuess1ErrorHidden();
+  }
+};
+
+function toggleName2Error() {
+  if (user2NameIn.value === "") {
+    invalidName2ErrorVisible();
+  } else {
+    invalidName2ErrorHidden();
+  }
+};
+
+function toggleGuess2Error() {
+  if (user2GuessIn.value === "" ||
+      user2GuessIn.value < minRangeIn.value ||
+      user2GuessIn.value > maxRangeIn.value) {
+    invalidGuess2ErrorVisible();
+  } else {
+    invalidGuess2ErrorHidden();
+  }
+};
+
+// INVOKED FUNCTIONS: ERROR MESSAGES
 function invalidRangeErrorVisible() {
   maxRangeError.style.visibility = 'visible';
+  minRangeIn.style.border = "solid .15em #DD1972";
   minRangeError.style.visibility = 'visible';
+  maxRangeIn.style.border = "solid .15em #DD1972";
 }
 
 function invalidRangeErrorHidden() {
   maxRangeError.style.visibility = 'hidden';
+  maxRangeIn.style.border = "0.15em solid #D0D2d3";
   minRangeError.style.visibility = 'hidden';
+  minRangeIn.style.border = "0.15em solid #D0D2d3";
 }
 
- clearGameBut.addEventListener('click', function() {
-});
+function invalidName1ErrorVisible() {
+  name1Error.style.visibility = 'visible';
+  user1NameIn.style.border = "solid .15em #DD1972";
+}
 
+function invalidName1ErrorHidden() {
+  name1Error.style.visibility = 'hidden';
+  user1NameIn.style.border = "0.15em solid #D0D2d3";
+}
 
-// INVOKED FUNCTIONS
+function invalidGuess1ErrorVisible() {
+  guess1Error.style.visibility = 'visible';
+  user1GuessIn.style.border = "solid .15em #DD1972";
+}
+
+function invalidGuess1ErrorHidden() {
+  guess1Error.style.visibility = 'hidden';
+  user1GuessIn.style.border = "0.15em solid #D0D2d3";
+}
+
+function invalidName2ErrorVisible() {
+  name2Error.style.visibility = 'visible';
+  user2NameIn.style.border = "solid .15em #DD1972";
+}
+
+function invalidName2ErrorHidden() {
+  name2Error.style.visibility = 'hidden';
+  user2NameIn.style.border = "0.15em solid #D0D2d3";
+}
+
+function invalidGuess2ErrorVisible() {
+  guess2Error.style.visibility = 'visible';
+  user2GuessIn.style.border = "solid .15em #DD1972";
+}
+
+function invalidGuess2ErrorHidden() {
+  guess2Error.style.visibility = 'hidden';
+  user2GuessIn.style.border = "0.15em solid #D0D2d3";
+}
+
+// INVOKED FUNCTIONS: RESET/CLEAR GAME BUTTONS
 function emptyNameGuessInputs() {
   user1NameIn.value = "";
   user2NameIn.value = "";
@@ -148,19 +251,6 @@ updateRangeBut.addEventListener('click', function() {
     usersMaxRange.innerText = maxRangeIn.value;
     console.log(minRangeIn.value, maxRangeIn.value);
     toggleRangeError();
-});
-
-submitGuessBut.addEventListener('click', function() {
-
-     user1NamePGuessOut.innerText = user1NameIn.value;
-     user2NamePGuessOut.innerText = user2NameIn.value;
-     user1ScoreOutNum1.innerText = user1GuessIn.value;
-     user2ScoreOutNum1.innerText = user2GuessIn.value;
-     user1NamePWinnercard.innerText = user1NameIn.value;
-     user2NamePWinnercard.innerText = user2NameIn.value;
-     userGuessTester(parseInt(user1GuessIn.value), parseInt(user2GuessIn.value));
-     user1GuessFeedback(parseInt(user1GuessIn.value));
-     user2GuessFeedback(parseInt(user2GuessIn.value));
 });
 
 function userGuessTester(num1, num2) {
